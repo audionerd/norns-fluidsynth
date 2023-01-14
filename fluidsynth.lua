@@ -36,6 +36,7 @@ end
 
 function fluidsynth_stop()
   if pid ~= nil then
+    os.execute("aconnect -d 128:0 129:0")
     os.execute("jack_disconnect fluidsynth:left crone:input_5")
     os.execute("jack_disconnect fluidsynth:right crone:input_6")
     os.execute("sleep 0.25")
