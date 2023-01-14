@@ -42,7 +42,7 @@ function fluidsynth_stop()
     os.execute("sleep 0.25")
 
     os.execute("kill "..pid)
-    os.execute("sleep 0.25")
+    os.execute("sleep 1")
     pid = nil
   end
 end
